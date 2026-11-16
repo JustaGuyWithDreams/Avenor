@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENOR | Web Design & Development</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #07111f;
+            color: #f4f7ff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1c2c43;
+        }
+
+        .logo {
+            color: #45a3ff;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #45a3ff;
+        }
+
+        section {
+            padding: 85px 8%;
+        }
+
+        .hero {
+            min-height: 480px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background:
+                radial-gradient(circle at 80% 30%, #123b67 0%, transparent 35%);
+        }
+
+        .tag {
+            color: #45a3ff;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 65px);
+            line-height: 1.1;
+            max-width: 750px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #45a3ff;
+        }
+
+        .hero p {
+            color: #aab8ca;
+            max-width: 550px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #1687f8;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #0065cc;
+            transform: translateY(-3px);
+        }
+
+        .secondary {
+            background: transparent;
+            border: 1px solid #45a3ff;
+            margin-left: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .section-text {
+            color: #aab8ca;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .blue {
+            color: #45a3ff;
+        }
+
+        .about {
+            background: #0b192b;
+        }
+
+        .about-content {
+            max-width: 750px;
+        }
+
+        .about-content p {
+            color: #b7c4d6;
+            margin-bottom: 15px;
+        }
+
+        .dream {
+            margin-top: 30px;
+            padding: 25px;
+            background: #10243d;
+            border-left: 4px solid #45a3ff;
+            border-radius: 8px;
+        }
+
+        .dream h3 {
+            color: #45a3ff;
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #0e1d30;
+            border: 1px solid #1d3450;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #45a3ff;
+        }
+
+        .card h3 {
+            color: #45a3ff;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aab8ca;
+            font-size: 14px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #45a3ff;
+            margin-top: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 27px;
+            font-weight: bold;
+            color: white;
+            margin: 15px 0;
+        }
+
+        .price span {
+            font-size: 13px;
+            color: #aab8ca;
+            font-weight: normal;
+        }
+
+        .tools {
+            background: #0b192b;
+        }
+
+        .contact {
+            text-align: center;
+            background:
+                radial-gradient(circle at center, #123b67 0%, #07111f 65%);
+        }
+
+        .contact p {
+            color: #b7c4d6;
+            margin: 15px auto 30px;
+            max-width: 550px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #1c2c43;
+            color: #718198;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .secondary {
+                margin: 12px 0 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">AVENOR</div>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#precos">Preços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="tag">WEB DESIGN • DEVELOPMENT</div>
+
+        <h1>
+            Transformando ideias em
+            <span>experiências digitais.</span>
+        </h1>
+
+        <p>
+            Criação de sites modernos, organizados e adaptados
+            para diferentes dispositivos. Conheça meu trabalho
+            e acompanhe minha evolução na programação.
+        </p>
+
+        <div>
+            <a href="#projetos" class="button">Ver projetos</a>
+
+            <a href="https://wa.me/5511998060745?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20site."
+               class="button secondary">
+                Entrar em contato
+            </a>
+        </div>
+    </section>
+
+    <section class="about" id="sobre">
+        <div class="about-content">
+            <div class="tag">QUEM ESTÁ POR TRÁS</div>
+
+            <h2>Sobre <span class="blue">mim</span></h2>
+
+            <p>
+                Olá! Meu nome é Carlos Eduardo Carvalho Vasconcelos.
+                Sou um desenvolvedor web em formação, interessado
+                em tecnologia, criatividade e desenvolvimento de sites.
+            </p>
+
+            <p>
+                Atualmente estou aprendendo HTML e CSS e desenvolvendo
+                meus projetos utilizando um celular Android e o
+                aplicativo Acode.
+            </p>
+
+            <p>
+                Acredito que cada projeto é uma oportunidade de
+                aprender, melhorar e transformar ideias em realidade.
+            </p>
+
+            <div class="dream">
+                <h3>Meu grande objetivo</h3>
+                <p>
+                    Meu sonho é trabalhar na Microsoft no futuro,
+                    desenvolvendo minhas habilidades e construindo
+                    uma carreira na área de tecnologia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="tag">MINHA EVOLUÇÃO</div>
+
+        <h2>Habilidades e <span class="blue">conhecimentos</span></h2>
+
+        <p class="section-text">
+            Estou construindo minha base na programação e
+            desenvolvendo novas habilidades a cada projeto.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>HTML</h3>
+                <p>
+                    Estruturação de páginas e organização
+                    dos elementos de um site.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>CSS</h3>
+                <p>
+                    Aprendizado de cores, layouts, estilos
+                    e adaptação para celulares.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Criatividade</h3>
+                <p>
+                    Desenvolvimento de ideias visuais
+                    e conceitos para projetos digitais.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Inteligência Artificial</h3>
+                <p>
+                    Utilizo ferramentas de IA como apoio
+                    para aprender, desenvolver e melhorar
+                    meus projetos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="tag">MEU PORTFÓLIO</div>
+
+        <h2>Projetos <span class="blue">desenvolvidos</span></h2>
+
+        <p class="section-text">
+            Alguns dos projetos que estou criando para
+            praticar e demonstrar minhas habilidades.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Vitta Fisioterapia</h3>
+
+                <p>
+                    Projeto demonstrativo de um site para uma
+                    clínica fictícia de fisioterapia, com
+                    apresentação de serviços e informações.
+                </p>
+
+                <a href="https://vitta-projecttest.netlify.app/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="project-link">
+                    Visualizar projeto →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Novos projetos</h3>
+
+                <p>
+                    Novas ideias e experiências estão sendo
+                    desenvolvidas. Este portfólio será atualizado
+                    conforme minha evolução.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos">
+        <div class="tag">SERVIÇOS</div>
+
+        <h2>Valores de <span class="blue">referência</span></h2>
+
+        <p class="section-text">
+            Valores iniciais ilustrativos. O preço final depende
+            do conteúdo, da quantidade de páginas e das funcionalidades
+            de cada projeto.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Landing Page</h3>
+                <p>Página única para apresentar um produto ou serviço.</p>
+                <div class="price">R$ 120 <span>/ inicial</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Site Institucional</h3>
+                <p>Site de apresentação com informações e contato.</p>
+                <div class="price">R$ 180 <span>/ inicial</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Site com até 4 páginas</h3>
+                <p>Projeto com mais seções e páginas organizadas.</p>
+                <div class="price">R$ 300 <span>/ inicial</span></div>
+            </div>
+
+            <div class="card">
+                <h3>Redesign</h3>
+                <p>Melhorias visuais e reorganização de um site existente.</p>
+                <div class="price">R$ 150 <span>/ inicial</span></div>
+            </div>
+        </div>
+
+        <p class="section-text" style="margin-top: 25px;">
+            Hospedagem, domínio, manutenção e funcionalidades extras
+            podem ter custos separados.
+        </p>
+    </section>
+
+    <section class="tools">
+        <div class="tag">MEU AMBIENTE DE DESENVOLVIMENTO</div>
+
+        <h2>Ferramentas que <span class="blue">utilizo</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Acode</h3>
+                <p>
+                    Aplicativo utilizado para escrever e editar
+                    meus códigos diretamente pelo celular.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Android</h3>
+                <p>
+                    Atualmente desenvolvo meus projetos
+                    utilizando meu próprio celular.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>HTML e CSS</h3>
+                <p>
+                    Tecnologias que estou estudando para
+                    construir meus primeiros sites.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="tag">VAMOS CONVERSAR?</div>
+
+        <h2>Tem uma ideia em <span class="blue">mente?</span></h2>
+
+        <p>
+            Entre em contato para conversar sobre seu projeto,
+            conhecer meu trabalho ou trocar ideias.
+        </p>
+
+        <a href="https://wa.me/5511998060745?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20site."
+           class="button"
+           target="_blank"
+           rel="noopener noreferrer">
+            Conversar pelo WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 AVENOR — Carlos Eduardo Carvalho Vasconcelos</p>
+        <p>Ideas become digital.</p>
+    </footer>
+
+</body>
+</html>
