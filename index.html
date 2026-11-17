@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVENOR — Web Design e Desenvolvimento. Projetos digitais modernos e criativos por Carlos Eduardo.">
     <title>AVENOR | Web Design & Development</title>
 
     <style>
@@ -54,7 +56,7 @@
         }
 
         .hero {
-            min-height: 480px;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -124,7 +126,9 @@
             color: #45a3ff;
         }
 
-        .about {
+        .about,
+        .avenor-section,
+        .tools {
             background: #0b192b;
         }
 
@@ -179,12 +183,33 @@
             font-size: 14px;
         }
 
+        .project-type {
+            display: inline-block;
+            color: #8fc8ff;
+            background: #122d4b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 11px;
+            margin-bottom: 15px;
+        }
+
         .project-link {
             display: inline-block;
             color: #45a3ff;
             margin-top: 18px;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .project-link:hover {
+            color: white;
+        }
+
+        .project-status {
+            display: inline-block;
+            color: #aab8ca;
+            font-size: 13px;
+            margin-top: 18px;
         }
 
         .price {
@@ -198,10 +223,6 @@
             font-size: 13px;
             color: #aab8ca;
             font-weight: normal;
-        }
-
-        .tools {
-            background: #0b192b;
         }
 
         .contact {
@@ -275,18 +296,44 @@
         </h1>
 
         <p>
-            Criação de sites modernos, organizados e adaptados
-            para diferentes dispositivos. Conheça meu trabalho
-            e acompanhe minha evolução na programação.
+            Bem-vindo à AVENOR. Um espaço dedicado à criatividade,
+            tecnologia e desenvolvimento de experiências digitais.
+            Conheça meus projetos e acompanhe minha evolução.
         </p>
 
         <div>
             <a href="#projetos" class="button">Ver projetos</a>
 
-            <a href="https://wa.me/5511998060745?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20um%20site."
-               class="button secondary">
+            <a href="#contato" class="button secondary">
                 Entrar em contato
             </a>
+        </div>
+    </section>
+
+    <section class="avenor-section">
+        <div class="about-content">
+            <div class="tag">CONHEÇA A AVENOR</div>
+
+            <h2>Mais que um nome, uma <span class="blue">identidade.</span></h2>
+
+            <p>
+                A AVENOR é minha identidade pessoal no universo
+                do desenvolvimento web. Um espaço onde reúno
+                criatividade, tecnologia e ideias para transformá-las
+                em projetos digitais.
+            </p>
+
+            <p>
+                Aqui apresento experiências de criação de sites,
+                conceitos visuais e projetos desenvolvidos durante
+                minha jornada de aprendizado.
+            </p>
+
+            <p>
+                Cada projeto representa uma oportunidade de
+                experimentar novas ideias, desenvolver habilidades
+                e evoluir na programação.
+            </p>
         </div>
     </section>
 
@@ -303,9 +350,9 @@
             </p>
 
             <p>
-                Atualmente estou aprendendo HTML e CSS e desenvolvendo
-                meus projetos utilizando um celular Android e o
-                aplicativo Acode.
+                Atualmente estou aprendendo HTML e CSS e utilizando
+                meus projetos para colocar em prática os conhecimentos
+                que venho adquirindo.
             </p>
 
             <p>
@@ -335,6 +382,7 @@
         </p>
 
         <div class="cards">
+
             <div class="card">
                 <h3>HTML</h3>
                 <p>
@@ -367,6 +415,7 @@
                     meus projetos.
                 </p>
             </div>
+
         </div>
     </section>
 
@@ -376,18 +425,23 @@
         <h2>Projetos <span class="blue">desenvolvidos</span></h2>
 
         <p class="section-text">
-            Alguns dos projetos que estou criando para
-            praticar e demonstrar minhas habilidades.
+            Projetos demonstrativos criados para praticar
+            desenvolvimento web, explorar ideias e apresentar
+            diferentes possibilidades de experiências digitais.
         </p>
 
         <div class="cards">
+
             <div class="card">
+                <span class="project-type">SITE DEMONSTRATIVO</span>
+
                 <h3>Vitta Fisioterapia</h3>
 
                 <p>
-                    Projeto demonstrativo de um site para uma
-                    clínica fictícia de fisioterapia, com
-                    apresentação de serviços e informações.
+                    Conceito de site para uma clínica fictícia
+                    de fisioterapia. Apresenta serviços, informações
+                    sobre a clínica e formas de contato, com uma
+                    identidade visual leve e acolhedora.
                 </p>
 
                 <a href="https://vitta-projecttest.netlify.app/"
@@ -399,14 +453,22 @@
             </div>
 
             <div class="card">
-                <h3>Novos projetos</h3>
+                <span class="project-type">SITE DEMONSTRATIVO</span>
+
+                <h3>BRASA & PÃO</h3>
 
                 <p>
-                    Novas ideias e experiências estão sendo
-                    desenvolvidas. Este portfólio será atualizado
-                    conforme minha evolução.
+                    Conceito de site para uma hamburgueria fictícia,
+                    com cardápio digital, categorias de produtos,
+                    preços ilustrativos e experiência de pedidos
+                    pelo WhatsApp.
                 </p>
+
+                <span class="project-status">
+                    Publicação do projeto em andamento.
+                </span>
             </div>
+
         </div>
     </section>
 
@@ -422,6 +484,7 @@
         </p>
 
         <div class="cards">
+
             <div class="card">
                 <h3>Landing Page</h3>
                 <p>Página única para apresentar um produto ou serviço.</p>
@@ -445,6 +508,7 @@
                 <p>Melhorias visuais e reorganização de um site existente.</p>
                 <div class="price">R$ 150 <span>/ inicial</span></div>
             </div>
+
         </div>
 
         <p class="section-text" style="margin-top: 25px;">
@@ -459,29 +523,31 @@
         <h2>Ferramentas que <span class="blue">utilizo</span></h2>
 
         <div class="cards">
-            <div class="card">
-                <h3>Acode</h3>
-                <p>
-                    Aplicativo utilizado para escrever e editar
-                    meus códigos diretamente pelo celular.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Android</h3>
-                <p>
-                    Atualmente desenvolvo meus projetos
-                    utilizando meu próprio celular.
-                </p>
-            </div>
 
             <div class="card">
                 <h3>HTML e CSS</h3>
                 <p>
-                    Tecnologias que estou estudando para
-                    construir meus primeiros sites.
+                    Tecnologias que estudo e utilizo para
+                    construir e estilizar páginas web.
                 </p>
             </div>
+
+            <div class="card">
+                <h3>GitHub</h3>
+                <p>
+                    Plataforma que utilizo para armazenar,
+                    organizar e publicar meus projetos.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Ferramentas de IA</h3>
+                <p>
+                    Recursos que utilizo como apoio durante
+                    o aprendizado e desenvolvimento dos projetos.
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -491,7 +557,7 @@
         <h2>Tem uma ideia em <span class="blue">mente?</span></h2>
 
         <p>
-            Entre em contato para conversar sobre seu projeto,
+            Entre em contato para conversar sobre um projeto,
             conhecer meu trabalho ou trocar ideias.
         </p>
 
@@ -506,7 +572,9 @@
     <footer>
         <p>© 2026 AVENOR — Carlos Eduardo Carvalho Vasconcelos</p>
         <p>Ideas become digital.</p>
+        <p>Web Design • Development</p>
     </footer>
 
 </body>
 </html>
+
